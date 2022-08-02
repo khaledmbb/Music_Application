@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./Css/Style.css">
+
+  <link rel="shortcut icon" href="#" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Music App</title>
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="spinner">
+      <span class="circle circle-1"></span>
+      <span class="circle circle-2"></span>
+      <span class="circle circle-3"></span>
+      <span class="circle circle-4"></span>
+      <span class="circle circle-5"></span>
+      <span class="circle circle-6"></span>
+      <span class="circle circle-7"></span>
+      <span class="circle circle-8"></span>
+    </div>
+  </div>
+
+  <div class="error">
+    <p></p>
+  </div>
+
+  <div class="player">
+    <div class="cover">
+      <img src="" alt="">
+    </div>
+    <div class="info">
+      <div class="title"></div>
+      <div class="singer"></div>
+    </div>
+    <div class="volume-box">
+      <span class="volume-down" onclick="reduceVolume()"><i class="fa-solid fa-minus"></i></span>
+      <input type="range" class="volume-range" step="1" value="80" min="0" max="100" oninput="handleSeekVolume()">
+      <span class="volume-up" onclick="increaseVolume()"><i class="fa-solid fa-plus"></i></span>
+    </div>
+    <div class="btn-box">
+      <span class="repeat" onclick="handleRepeat()">
+        <i class="fa-solid fa-arrow-rotate-right"></i>
+      </span>
+      <span class="like" onclick="handleFavorite()">
+
+        <i class="fa-solid fa-heart"></i>
+      </span>
+      <span class="volume-control" onclick="handleVolume()">
+
+        <i class="fa-solid fa-volume-high"></i>
+      </span>
+    </div>
+    <div class="music-box">
+      <input type="range" step="1" class="seekbar" value="0" min="0" max="100" oninput="handleSeekBar()">
+
+      <audio class="music-element">
+      </audio>
+      <span class="current-time">00:00</span><span class="duration">0:0</span>
+      <span class="play" onclick="handlePause()">
+        <i class="fa-solid fa-pause"></i>
+      </span>
+      <span class="pause" onclick="handlePlay()">
+        <i class="fa-solid fa-play"></i>
+      </span>
+      <span class="next" onclick="next()">
+        <i class="fa-solid fa-forward-step"></i>
+      </span>
+      <span class="previous" onclick="previous()">
+        <i class="fa-solid fa-backward-step"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="colors">
+    <div class="sitting">
+      <i class="fa-solid fa-gear"></i>
+    </div>
+    <ul>
+      <li data-color="green"></li>
+      <li data-color="purple"></li>
+      <li data-color="orange" class="active"></li>
+      <li data-color="black"></li>
+    </ul>
+  </div>
+
+  <script src="./Js/Main.js"></script>
+  <script src="./Js/all.min.js"></script>
+
+</body>
+
+</html>
